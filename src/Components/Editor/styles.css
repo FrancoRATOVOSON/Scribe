@@ -1,0 +1,9 @@
+@layer components {
+  .editor {
+    @apply outline-none whitespace-pre-line break-words bg-white p-4 rounded-md shadow-md;
+  }
+
+  .editor-content {
+    @apply block;
+  }
+}
