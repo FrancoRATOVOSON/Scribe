@@ -1,9 +1,14 @@
 {
-  "name": "scribe",
+  "name": "twz-scribe",
   "version": "0.1.0",
   "description": "Another react based rich text editor.",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "scripts": {
-    "start": "webpack serve --open"
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
   "repository": {
     "type": "git",
@@ -28,23 +33,18 @@
     "url": "https://github.com/FrancoRATOVOSON/Scribe/issues"
   },
   "homepage": "https://github.com/FrancoRATOVOSON/Scribe#readme",
-  "dependencies": {
+  "files": [
+    "/lib"
+  ],
+  "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
-    "autoprefixer": "^10.4.0",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -53,15 +53,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "postcss": "^8.3.11",
-    "postcss-loader": "^6.2.0",
     "prettier": "^2.4.1",
-    "style-loader": "^3.3.1",
-    "tailwindcss": "^2.2.17",
-    "typescript": "^4.4.4",
-    "webpack": "^5.60.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.4"
   }
 }

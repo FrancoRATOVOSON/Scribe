@@ -1,15 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import EditorContainer from './Components/EditorContainer'
 
-import './index.css'
-
-export default function App() {
+export default function Hello() {
   return (
-    <div className="my-editor">
-      <EditorContainer />
+    <div>
+      <h1>Hello From My Component</h1>
     </div>
   )
 }
-
-ReactDOM.render(<App />, document.getElementById('root'))

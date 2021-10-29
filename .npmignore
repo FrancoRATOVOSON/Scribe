@@ -1,0 +1,5 @@
+/.vscode
+/example
+.eslintrc.json
+.gitignore
+.prettierrc
